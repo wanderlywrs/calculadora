@@ -8,7 +8,7 @@ Uma calculadora simples desenvolvida com **HTML**, **CSS** e **JavaScript**, com
 
 ![Imagem da calculadora](srs/calculadora.png)
 
-[🔗 Acesse a calculadora online](https://wanderlywrs.github.io/calculadora)
+[🔗 Acesse a calculadora online](https://wanderlywrs.github.io/calculadora/)
 
 ---
 
