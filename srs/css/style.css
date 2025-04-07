@@ -1,0 +1,153 @@
+@import url("https://use.typekit.net/sdz5low.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --nun: #333;
+    --opr: #f1a33c;
+    --igual: #2ecc71;
+    --limpar: #e74c3c;
+    --display: #111;
+    --display-fundo: #adff2f;
+
+    --font: "orbitron", sans-serif;
+}
+
+body {
+    background-color: #878787;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+    background-color: #000000;
+    color: white;
+    width: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #00000070;
+    padding: 8px;
+}
+
+.calculadora .display {
+    display: flex;
+    height: 100px;
+    background-color: #2ecc71;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #000000;
+    justify-content: end;
+    align-items: end;
+    font-size: 3rem;
+    padding: 15px;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 80px);
+    gap: 10px;
+    font-family: var(--font);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+button:hover {
+    filter: brightness(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: all 0.2s ease;
+}
+
+.cinza {
+    background-color: var(--nun);
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.laranja {
+    background-color: var(--opr);
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.vermelho {
+    background-color: var(--limpar);
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.verde {
+    background-color: var(--igual);
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+.igual {
+    grid-column: 4;
+    grid-row: 4 / span 2;
+    background-color: var(--igual);
+    font-size: 1.5rem;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.zero {
+    grid-column: 1 / span 2;
+}
+
+.ponto {
+    grid-column: 3;
+}
+
+.calculadora {
+    animation: aparecer 0.8s ease forwards;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width:426px){
+    .calculadora {
+        background-color: #000000;
+        color: white;
+        width: 250px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0 20px #00000070;
+        padding: 8px;
+    }
+    .botoes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 50px);
+        gap: 10px;
+        font-family: var(--font);
+    }
+    
+}
